@@ -7,9 +7,10 @@ However, the current implementation is a unified framework supporting many tasks
 
 ## Instructions to run the code
 
-### Download the datasets
+### Datasets
 We trained uni-modal classifiers (Linguistic, Visual, Acoustic) for two benchmark corpora video sentiment analysis datasets, CMU-MOSEI and CMU-MOSI. We exported the uni-modal sentiment judgments to pickle files, stored at data/pickle. 
 
+The training process of uni-modal classifiers had as follows: We first trained neural uni-modal classifiers. In particular, we used Bi-GRU layers with forward and backward state concatenation, followed by fully connected layers. The outputs gave linguistic, visual, and acoustic  d-dimentional embeddings, where d was the number of neurons in dense layers. Then, self-attentions were computed for each uni-modal dense representation, by calculating the scaled dot-product (Vaswani et al. 2017). Finally, each attentive uni-modal representation was fed into two fully connected layers, followed by a softmax layer to obtain sentiment judgments.
 
 ### Do A Single Run (train/valid/test) 
 
