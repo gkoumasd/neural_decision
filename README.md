@@ -1,6 +1,6 @@
 # Deep Multimodal Fusion of Uni-modal Classifers
 
-This is an implementation of the paper "Deep Multimodal Fusion for Persuasiveness Prediction" [1] in PyTorch
+This is an implementation of the paper "Deep Multimodal Fusion for Persuasiveness Prediction" [1] in PyTorch.
 However, the current implementation is a unified framework supporting many tasks, datasets, and neural models.
 
 
